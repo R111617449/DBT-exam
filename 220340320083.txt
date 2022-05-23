@@ -1,0 +1,163 @@
+---------------------------------------------------
+          Section 1
+-----------------------------------------------------
+
+1.  select * from dept;
+create table dept
+(
+deptno int(4),
+dname  varchar(15),
+loc     varchar(10)
+);
+
+insert into dept(deptno, dname ,loc,)
+values(10,'acounting', 'newyork') 
+values(10,'acounting' ,'newyork')
+values(10,'acounting' ,'newyork')
+values(10,'acounting' ,'newyork');
+
+
+
+-----------------------------------------------------------------------------
+2.
+create table emp
+(
+empno   int(4), 
+ename    varchar(10),
+job      varchar(9),
+hiredate   date,
+sal      float(7,2), 
+comm     float(7,2),
+deptno   int(2)
+);
+
+select * from emp;
+
+
+insert into emp(empno, ename,job,hiredate,sal,comm,deptno)
+ -- values(7839, 'king','manager', '1991-11-17',5000,null,10);
+
+-- values(7698, 'Blake','clerk', '1981-05-01',2850,null,30)
+
+-- values(7782, 'clark','manager', '1981-06-09',2450,null,10)
+
+-- values(7566, 'Jones','clerk', '1981-04-02',2975,null,20);
+
+-- values(7654, 'Martin','Salesman', '1981-09-28',1250,1400,30);
+
+values(7499, 'Allen','salesman', '1981-02-20', 1600,300,30);
+-----------------------------------------------------------------------------
+3.
+
+
+select ename from emp where sal between 2500 and 5000;
+
+
+
+--------------------------------------------------------------------------
+
+4.
+
+select ename from emp order by ename desc;
+
+
+
+----------------------------------------------------------------------------
+5.
+   
+   select lower(job) from emp;
+
+---------------------------------------------------------------------
+6.
+
+
+    select ename ,length(ename) from emp;
+
+
+-------------------------------------------------------------------------
+7.
+
+   select  deptno , count(empno)  from emp group by deptno;
+
+
+
+------------------------------------------------------------------------
+
+8.
+
+select dname , emp.deptno;ename from dept , emp where dept.deptno =
+emp.deptno;
+
+
+-------------------------------------------------------------------
+9.
+
+   select position("AR" in "ename" ) from emp;
+
+-------------------------------------------------------------------
+
+10.
+
+   select ename , .20*sal HRA from emp;
+
+
+---------------------------------------------------------------------
+           section 2
+
+----------------------------------------------------------------
+2.
+
+   
+delimiter //
+create funct1  abc( y int)
+
+return boolean
+deterministic
+begin 
+
+if y < a+b
+    return true;
+    
+    else 
+    
+    return false;
+    
+    
+    end; //
+    delimiter ;
+
+
+
+
+-------------------------------------------------------------------------
+
+
+
+1.
+
+    delimiter proc1 //
+      create procedure pqr(cdac)
+      begin   
+
+      declare  x int;
+       String =cdac;
+       Srring  = dac;
+
+
+end; //
+delimiter ;
+
+
+----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
